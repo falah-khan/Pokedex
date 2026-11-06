@@ -19,7 +19,7 @@ A simple and interactive Pokédex web application powered by [PokéAPI](https://
 ## API
 https://pokeapi.co/api/v2/pokemon/
 
-## ✉️ Contact
+## Contact
 
 **Falah Khan** 
 
