@@ -21,7 +21,7 @@ https://pokeapi.co/api/v2/pokemon/
 
 ## Contact
 
-**Falah Khan** 
+- ***Author*** : *Falah Khan* 
 
 - ***LinkedIn*** : https://www.linkedin.com/in/falah-khan-dev/
 - ***Gmail*** : falah2010khan@gmail.com
