@@ -21,9 +21,12 @@ https://pokeapi.co/api/v2/pokemon/
 
 ## ✉️ Contact
 
-Falah Khan - [Linkedin](https://www.linkedin.com/in/falah-khan-dev/) - falah2010khan@gmail.com
+**Falah Khan** 
 
-Project Link: [Pokédex](https://github.com/falah-khan/Pokedex.git)
+- ***LinkedIn*** : https://www.linkedin.com/in/falah-khan-dev/
+- ***Gmail*** : falah2010khan@gmail.com
+- ***Project Link*** : [Pokédex](https://github.com/falah-khan/Pokedex.git)
+
 ## Installation
 
 ```bash
