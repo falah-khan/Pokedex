@@ -19,6 +19,11 @@ A simple and interactive Pokédex web application powered by [PokéAPI](https://
 ## API
 https://pokeapi.co/api/v2/pokemon/
 
+## ✉️ Contact
+
+Falah Khan - [Linkedin](https://www.linkedin.com/in/falah-khan-dev/) - falah2010khan@gmail.com
+
+Project Link: [Pokédex](https://github.com/falah-khan/Pokedex.git)
 ## Installation
 
 ```bash
