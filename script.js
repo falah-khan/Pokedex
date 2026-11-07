@@ -1,5 +1,3 @@
-// PokeAPI --- https://pokeapi.co/
-
 async function fetchPokemon() {
     try {
         let pokemonName = document.getElementById("pokemonName").value.toLowerCase()
@@ -8,7 +6,7 @@ async function fetchPokemon() {
         if (!response.ok) {
             throw new Error("Could not fetch response")
         }
-        
+
         let data = await response.json()
         let dataSprit = data.sprites.front_default
         let pokemonImg = document.getElementById("pokemonImg")
@@ -16,8 +14,8 @@ async function fetchPokemon() {
         pokemonImg.alt = pokemonName
         pokemonImg.style.display = "block"
 
-        }
-    catch(error){
+    }
+    catch (error) {
         console.error(error)
     }
 }
