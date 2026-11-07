@@ -1,3 +1,7 @@
+// favIcon
+const faviconIco = "https://assets.pokemon.com/static2/_ui/img/favicon.ico"
+document.querySelector("#favIcon").href = faviconIco
+
 async function fetchPokemon() {
     try {
         let pokemonName = document.getElementById("pokemonName").value.toLowerCase()
