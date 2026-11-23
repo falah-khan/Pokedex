@@ -23,10 +23,5 @@ A simple and interactive Pokédex web application powered by [PokéAPI](https://
 
 - ***Author*** : *Falah Khan* 
 - ***LinkedIn*** : https://www.linkedin.com/in/falah-khan-dev/
-- ***Gmail*** : falah2010khan@gmail.com
 - ***Project Link*** : [Pokédex](https://github.com/falah-khan/Pokedex.git)
 
- ## Installation
-
-```bash
-git clone https://github.com/falah-khan/Pokedex.git
