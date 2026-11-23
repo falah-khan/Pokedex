@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
+    <title>Pokedex</title>
 
     <!-- favIcon -->
     <link id="favIcon" rel="shortcut icon" href="" type="image/x-icon">
@@ -24,21 +24,22 @@
 
 </head>
 
-<body class="bg-[url('../images/bodyBackground.avif')]">
+<body class="min-h-screen bg-[#f4f1e8] bg-fixed text-slate-800">
     <!-- nav start -->
     <header
-        class="block transition-all duration-1000 w-full max-w-screen-lg px-4 py-2 mx-auto bg-white shadow-2xl shadow-neutral-600 rounded-xl md:px-8 md:py-3 mt-5">
-        <nav class="container flex flex-wrap md:items-center justify-between mx-auto text-slate-800">
-            <div class="flex flex-col md:gap-0 gap-3 md:flex-row justify-between md:container">
+        class="block w-[calc(100%-1rem)] max-w-screen-lg px-3 py-2 mx-auto bg-white/95 shadow-lg shadow-slate-900/15 rounded-xl sm:w-[calc(100%-2rem)] sm:px-6 sm:py-4 mt-3 sm:mt-5">
+        <nav class="relative flex items-center justify-between mx-auto text-slate-800">
+            <div class="flex flex-1 flex-row items-center justify-between md:flex-row md:container">
                 <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" class="h-7"
-                        alt="Pokedex Logo" />
+                    <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png"
+                        class="h-8 sm:h-9" alt="Pokedex Logo" />
                 </a>
                 <div id="navLinks"
-                    class="max-h-0 opacity-0 overflow-hidden transition-all duration-700 md:max-h-none md:opacity-100 md:overflow-visible">
-                    <ul class="flex flex-col gap-2 mt-2 mb-4 md:mb-0 md:mt-0 md:flex-row text-center md:gap-6">
+                    class="absolute left-0 right-0 top-full z-30 max-h-0 opacity-0 overflow-hidden transition-all duration-300 md:static md:max-h-none md:opacity-100 md:overflow-visible">
+                    <ul
+                        class="flex flex-col gap-2 mt-2 mb-0 rounded-xl border border-slate-100 bg-white p-3 shadow-lg md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
                         <li
-                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration-300 hover:text-red-600 hover:-translate-y-1">
+                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration-300 hover:text-red-700 hover:-translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-6 h-6">
                                 <circle cx="50" cy="50" r="48" fill="#000000" stroke="#000000" stroke-width="2" />
                                 <path d="M 50,5 A 45,45 0 0,1 95,50 L 5,50 A 45,45 0 0,1 50,5 Z" fill="#FF1C1C" />
@@ -53,20 +54,20 @@
                             </a>
                         </li>
                         <li
-                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration- hover:text-red-600 hover:-translate-y-1">
+                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration- hover:text-red-700 hover:-translate-y-1">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <a href="#" class="flex items-center">
                                 Search
                             </a>
                         </li>
                         <li
-                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration-300 hover:text-red-600 hover:-translate-y-1">
+                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration-300 hover:text-red-700 hover:-translate-y-1">
                             <i class="fa-solid fa-scale-balanced"></i> <a href="#" class="flex items-center">
                                 Compare
                             </a>
                         </li>
                         <li
-                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration-300 hover:text-red-600 hover:-translate-y-1">
+                            class="flex items-center p-1 text-sm gap-x-2 text-slate-600 transition-all duration-300 hover:text-red-700 hover:-translate-y-1">
                             <i class="fa-regular fa-circle-user text-base"></i>
                             <a href="#" class="flex items-center">
                                 About
@@ -76,8 +77,8 @@
                 </div>
             </div>
             <button
-                class="relative ml-auto p-4 h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:shadow-md focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:hidden duration-200 hover:text-red-600 focus:text-red-600 focus:shadow-md"
-                type="button" id="menuIcon">
+                class="relative ml-2 p-4 h-10 w-10 shrink-0 select-none rounded-lg text-center text-xs text-inherit transition-all hover:bg-slate-100 focus:text-red-700 md:hidden"
+                type="button" id="menuIcon" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
                 <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                     <i class="fa-solid fa-bars font-bold text-2xl w-6 h-6 "></i>
                 </span>
@@ -87,29 +88,157 @@
     <!-- nav end -->
 
     <!-- Hero start -->
-    <main class="block w-full max-w-screen-lg px-4 py-2 mx-auto bg-white rounded-xl md:px-8 md:py-3 mt-16">
-        <section id="Search" class="w-full flex flex-row justify-between">
-                <div class="relative inline-flex  rounded-lg p-1 flex-row items-center gap-3  border-2 border-slate-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-5 h-5 inline-block">
-                        <circle cx="50" cy="50" r="48" fill="#000000" stroke="#000000" stroke-width="2" />
-                        <path d="M 50,5 A 45,45 0 0,1 95,50 L 5,50 A 45,45 0 0,1 50,5 Z" fill="#FF1C1C" />
-                        <path d="M 5,50 A 45,45 0 0,0 95,50 L 50,50 Z" fill="#FFFFFF" />
-                        <line x1="4" y1="50" x2="96" y2="50" stroke="#000000" stroke-width="6" />
-                        <circle cx="50" cy="50" r="14" fill="#000000" />
-                        <circle cx="50" cy="50" r="9" fill="#FFFFFF" />
-                        <circle cx="50" cy="50" r="6" fill="#FFFFFF" stroke="#DCDCDC" stroke-width="1" />
-                    </svg>
-                    <input type="text" id="Search" placeholder="Search pokemon" autocorrect="off"   
-                        class="inline mt-0.5 rounded pe-10 p-1 border-none focus:placeholder:text-red-600 focus:outline-none" />
+    <main
+        class="block w-[calc(100%-1rem)] max-w-screen-lg px-3 py-4 mx-auto bg-white/95 rounded-xl sm:w-[calc(100%-2rem)] sm:px-6 md:px-8 md:py-6 mt-6 sm:mt-10">
+        <section id="Search"
+            class="w-full flex flex-col gap-3 md:flex-row md:items-center mb-6 sm:mb-8">
+            <div
+                class="relative inline-flex w-full min-w-0 rounded-lg p-1.5 flex-row items-center gap-2 border border-slate-300 shadow-sm focus-within:border-red-700 focus-within:ring-2 focus-within:ring-red-100 md:flex-1">
+                <button type="button" aria-label="Submit"
+                    class="rounded-full p-1 text-slate-600 transition-colors hover:bg-gray-100 focus:bg-gray-100">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" id="pokemonSearch" placeholder="Search Pokemon" autocorrect="off" autocomplete="off"
+                    autofocus maxlength="20"
+                    class="inline mt-0.5 min-w-0 flex-1 rounded pe-2 border-none text-sm focus:placeholder:text-red-700 focus:outline-none sm:text-base"
+                    role="combobox" aria-autocomplete="list" aria-controls="pokemonSuggestions" aria-expanded="false" />
+                <button type="button" id="clearSearch" aria-label="Clear search"
+                    class="hidden shrink-0 rounded-full px-2 py-1 text-slate-500 hover:bg-slate-100 hover:text-red-700">&times;</button>
+                <ul id="pokemonSuggestions" role="listbox"
+                    class="hidden absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-lg border border-slate-200 bg-white py-1 shadow-lg">
+                </ul>
 
-                        <button type="button" aria-label="Submit"
-                            class="rounded-full p-2 text-slate-600 transition-colors hover:bg-gray-100 focus:bg-gray-100">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
+            </div>
+<div aria-label="Filter and sort Pokémon" class="flex flex-col gap-3 sm:flex-row sm:items-center md:shrink-0">
+            <div class="flex items-center gap-2 text-sm font-medium text-slate-700">
+                <span>Type</span>
+                <div class="relative w-full sm:w-44" data-dropdown="type">
+                    <button type="button" id="typeFilterButton" aria-haspopup="listbox" aria-expanded="false"
+                        aria-controls="typeFilterOptions"
+                        class="flex w-full items-center justify-between rounded-lg border border-slate-200 bg-white px-3 py-2 text-left text-sm font-normal text-slate-700 shadow-sm transition hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-100">
+                        <span id="typeFilterLabel">All types</span><i
+                            class="fa-solid fa-chevron-down ml-3 text-xs text-slate-400"></i>
+                    </button>
+                    <ul id="typeFilterOptions" role="listbox" aria-labelledby="typeFilterButton"
+                        class="hidden absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-lg border border-slate-200 bg-white py-1 shadow-lg">
+                        <li role="option" aria-selected="true" data-value=""
+                            class="cursor-pointer px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">All types</li>
+                        <li role="option" aria-selected="false" data-value="normal"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Normal
+                        </li>
+                        <li role="option" aria-selected="false" data-value="fire"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Fire
+                        </li>
+                        <li role="option" aria-selected="false" data-value="water"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Water
+                        </li>
+                        <li role="option" aria-selected="false" data-value="electric"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">
+                            Electric</li>
+                        <li role="option" aria-selected="false" data-value="grass"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Grass
+                        </li>
+                        <li role="option" aria-selected="false" data-value="ice"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Ice
+                        </li>
+                        <li role="option" aria-selected="false" data-value="fighting"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">
+                            Fighting</li>
+                        <li role="option" aria-selected="false" data-value="poison"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Poison
+                        </li>
+                        <li role="option" aria-selected="false" data-value="ground"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Ground
+                        </li>
+                        <li role="option" aria-selected="false" data-value="flying"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Flying
+                        </li>
+                        <li role="option" aria-selected="false" data-value="psychic"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">
+                            Psychic</li>
+                        <li role="option" aria-selected="false" data-value="bug"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Bug
+                        </li>
+                        <li role="option" aria-selected="false" data-value="rock"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Rock
+                        </li>
+                        <li role="option" aria-selected="false" data-value="ghost"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Ghost
+                        </li>
+                        <li role="option" aria-selected="false" data-value="dragon"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Dragon
+                        </li>
+                        <li role="option" aria-selected="false" data-value="dark"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Dark
+                        </li>
+                        <li role="option" aria-selected="false" data-value="steel"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Steel
+                        </li>
+                        <li role="option" aria-selected="false" data-value="fairy"
+                            class="cursor-pointer px-3 py-2 text-sm capitalize text-slate-700 hover:bg-slate-100">Fairy
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-red-600 text-white text-xl rounded-xl p-3 font-bold">
-                    <p>Search for a Pokémon by it's name or National Pokédex number.</p>
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium text-slate-700">
+                <span>Sort</span>
+                <div class="relative w-full sm:w-56" data-dropdown="sort">
+                    <button type="button" id="sortPokemonsButton" aria-haspopup="listbox" aria-expanded="false"
+                        aria-controls="sortPokemonsOptions"
+                        class="flex w-full items-center justify-between rounded-lg border border-slate-200 bg-white px-3 py-2 text-left text-sm font-normal text-slate-700 shadow-sm transition hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-100">
+                        <span id="sortPokemonsLabel">Number: low to high</span><i
+                            class="fa-solid fa-chevron-down ml-3 text-xs text-slate-400"></i>
+                    </button>
+                    <ul id="sortPokemonsOptions" role="listbox" aria-labelledby="sortPokemonsButton"
+                        class="hidden absolute left-0 right-0 top-full z-20 mt-1 overflow-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-lg">
+                        <li role="option" aria-selected="true" data-value="number"
+                            class="cursor-pointer px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Number: low to
+                            high</li>
+                        <li role="option" aria-selected="false" data-value="number-desc"
+                            class="cursor-pointer px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Number: high to
+                            low</li>
+                        <li role="option" aria-selected="false" data-value="name"
+                            class="cursor-pointer px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Name: A to Z</li>
+                        <li role="option" aria-selected="false" data-value="name-desc"
+                            class="cursor-pointer px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Name: Z to A</li>
+                    </ul>
                 </div>
+            </div>
+        </div>
+        </section>
+        <section id="pokemonCardsContainer"
+            class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+        </section>
+        <div class="mt-7 flex justify-center">
+            <button type="button" id="loadMoreButton"
+                class="hidden rounded-lg bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                Load more Pokémon
+            </button>
+        </div>
+        <section id="notFoundMessage" role="status" aria-live="polite"
+            class="hidden my-10 mx-auto w-full max-w-xl rounded-3xl border border-slate-200/80 bg-white px-6 py-12 text-center shadow-sm sm:px-12">
+            <div
+                class="relative mx-auto mb-6 flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-b from-amber-50 to-orange-100/80 ring-8 ring-orange-50/50 sm:h-48 sm:w-48">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png"
+                    alt="Confused Psyduck"
+                    class="h-40 w-40 object-contain drop-shadow-md transition-transform duration-300 hover:scale-105 sm:h-44 sm:w-44" />
+            </div>
+            <span
+                class="mb-3 inline-flex items-center rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-orange-700 ring-1 ring-inset ring-orange-600/20">
+                No Results
+            </span>
+            <h2 class="mb-2.5 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                No Pokemon found
+            </h2>
+            <p class="mx-auto mb-8 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
+                We couldn't find a match for your search. Check your spelling or try searching by a Pokemon's name or
+                Pokedex number.
+            </p>
+            <span class="text-xs text-slate-400">
+                Try: <strong class="font-medium text-slate-600">Pikachu</strong>, <strong
+                    class="font-medium text-slate-600">Charizard</strong>, or <strong
+                    class="font-medium text-slate-600">#001</strong>
+            </span>
         </section>
     </main>
     <!-- Hero end -->
@@ -119,3 +248,7 @@
 <script src="/Pokedex/js/script.js"></script>
 
 </html>
+<!-- tasks -->
+<!-- search  -->
+<!-- theme -->
+<!-- load -->
