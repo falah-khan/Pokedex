@@ -1,27 +1,19 @@
 # ⚡ Pokédex
 
-A simple and interactive Pokédex web application powered by [PokéAPI](https://pokeapi.co/).
+A simple and interactive Pokédex web application powered by [PokéAPI](https://pokeapi.co). Built as a front-end portfolio project to practice the JavaScript Fetch API and responsive UI design.
 
- ## Features
+## Features
 - Search Pokémon by name or ID.
-- View Pokémon images and details.
-- Explore Pokémon types and abilities.
-- Responsive user interface.
-- Dynamic data fetching using API.
+- Filter Pokémon by type and sort by Pokédex number.
+- View Pokémon sprites, types, and details.
+- Responsive user interface for mobile and desktop.
+- Dynamic data fetching using the RESTful PokéAPI.
 
- ## Technologies
+## Technologies
 - HTML5
-- CSS3
-- JavaScript
 - Tailwind CSS
+- JavaScript
 - PokéAPI
 
- ## API
-- ***PokéAPI*** : https://pokeapi.co/api/v2/pokemon/
-
- ## Contact
-
-- ***Author*** : *Falah Khan* 
-- ***LinkedIn*** : https://www.linkedin.com/in/falah-khan-dev/
-- ***Project Link*** : [Pokédex](https://github.com/falah-khan/Pokedex.git)
-
+## Disclaimer
+This is an **unofficial, non-commercial fan project** created strictly for educational and portfolio purposes. Pokémon and Pokémon character names are trademarks of Nintendo, Creatures Inc., and GAME FREAK inc. All Pokémon data and sprites are provided by [PokéAPI](https://pokeapi.co).
