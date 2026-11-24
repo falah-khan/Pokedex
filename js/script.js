@@ -128,7 +128,7 @@ async function loadPokemonIndex() {
         notFoundMessage.classList.add("hidden");
         pokemonCardsContainer.innerHTML = `
             <div role="alert" class="col-span-full my-10 mx-auto w-full max-w-xl rounded-3xl border border-red-200 bg-white px-6 py-10 text-center shadow-sm sm:px-12">
-                <div class="mx-auto mb-6 flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-b from-slate-50 to-blue-100/80 ring-8 ring-blue-50/60 sm:h-48 sm:w-48">
+                <div class="mx-auto mb-6 flex h-44 w-44 items-center justify-center rounded-full bg-linear-to-b from-slate-50 to-blue-100/80 ring-8 ring-blue-50/60 sm:h-48 sm:w-48">
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/201.png" alt="Unown" class="h-40 w-40 object-contain drop-shadow-md sm:h-44 sm:w-44" />
                 </div>
                 <span class="mb-3 inline-flex rounded-full bg-red-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-red-700 ring-1 ring-inset ring-red-600/20">Connection problem</span>
@@ -165,9 +165,9 @@ async function displayPokemons(pokemons) {
             <span class="rounded-xl px-2 py-1 text-[0.55rem] md:text-xs font-semibold capitalize text-white ${typeColors[type.name] || "bg-slate-500"}">${type.name}</span>
         `).join("");
         return `
-        <a href="#" class="group relative block min-w-0 overflow-hidden rounded-2xl border border-slate-200/80 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-red-200 hover:shadow-lg">
+        <a href="#" class="group relative block min-w-0 overflow-hidden rounded-2xl border border-slate-200/80 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-red-200 hover:shadow-lg focus:-translate-y-1 focus:border-red-200 focus:shadow-lg">
         <span class="absolute right-0 top-0 z-10 rounded-bl-2xl bg-rose-700 px-2.5 py-1.5 font-mono text-xs font-semibold tracking-wide text-white sm:px-3 sm:py-2 sm:text-sm">#${pokemon.id}</span>
-            <img src="${image || ""}" data-fallback-src="${sprite || ""}" alt="${pokemon.name}" class="h-28 w-full object-contain p-2 transition-transform duration-300 ease-out group-hover:scale-105 sm:h-40 md:h-52" onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; } else { this.onerror = null; this.style.display = 'none'; }" />
+            <img src="${image || ""}" data-fallback-src="${sprite || ""}" alt="${pokemon.name}" class="h-28 w-full object-contain p-2 transition-transform duration-300 ease-out group-hover:scale-105 group-focus:scale-105 sm:h-40 md:h-52" onerror="if (this.dataset.fallbackSrc && this.src !== this.dataset.fallbackSrc) { this.src = this.dataset.fallbackSrc; } else { this.onerror = null; this.style.display = 'none'; }" />
         <div class="px-2 pb-3 pt-1 sm:px-4 sm:pb-4">
             <div class="mb-2 flex min-h-5 flex-wrap justify-center gap-1 sm:justify-start">${typeBadges}</div>
             <h2 class="truncate text-center text-sm font-semibold text-slate-900 capitalize sm:text-lg md:text-xl">${pokemon.name}</h2>

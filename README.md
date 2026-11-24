@@ -2,6 +2,9 @@
 
 A simple and interactive Pokédex web application powered by [PokéAPI](https://pokeapi.co). Built as a front-end portfolio project to practice the JavaScript Fetch API and responsive UI design.
 
+## Live Demo
+- **Live Site:** View Pokédex Live at [Pokedex](https://falah-khan.github.io/Pokedex/)
+
 ## Features
 - Search Pokémon by name or ID.
 - Filter Pokémon by type and sort by Pokédex number.
